@@ -1,6 +1,6 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {Router} from "@angular/router";
-import {Http} from "@angular/http";
+import { Http, RequestOptions,RequestOptionsArgs,Headers} from "@angular/http";
 import "rxjs/Rx";
 import {Observable} from "rxjs";
 
@@ -18,32 +18,25 @@ declare var $:any;
 export class LoginComponent implements OnInit{
   userSource: Observable<any>;
   panduan:boolean;
-  userOne:any;
+  userOneName:string;
+  passwordNum:string;
 
+  // JSON.stringify({username:"abc",password:123})
+  body:string = "username="+"dika"+"&password="+"1234";
+  private headers = new Headers( { 'Content-Type': 'application/x-www-form-urlencoded' });
   constructor(public router:Router,public http: Http){
-    // JSON.stringify(this.userOne)
-    this.userSource = this.http.post('http://192.168.0.168:8083/EasyuiDemo/TestServlet',{username:"abc",passsword:123})
+    this.userSource = this.http.post('http://192.168.0.168:8083/EasyuiDemo/TestServlet',this.body,{headers: this.headers})
       .map(response =>response.json());
   };
-
   createUser(info:any){
     console.log(info);
-    this.userOne=info;
-
-    // if(this.panduan){
+    this.userOneName=info.username;
+    this.passwordNum=info.password;
+    if(this.panduan){
       this.router.navigateByUrl("allbox/address");
-    // }
+    }
   }
 
-
-  // @Output()
-  // showUser:EventEmitter <User>=new EventEmitter();
-
-
-  //
-  // makechange(){
-  //   // this.showUser.emit(this.user)
-  // }
 
 
   ngOnInit(): void {
@@ -107,10 +100,20 @@ export class LoginComponent implements OnInit{
     });*/
     this.userSource.subscribe(
       data => {this.panduan = data;
-        console.log(this.panduan)
+        console.log(this.panduan[0].login)
+        this.panduan=this.panduan[0].login
       }
     )
   }
+
+
+  // @Output()
+  // showUser:EventEmitter <User>=new EventEmitter();
+
+  //
+  // makechange(){
+  //   // this.showUser.emit(this.user)
+  // }
 
 
 }
