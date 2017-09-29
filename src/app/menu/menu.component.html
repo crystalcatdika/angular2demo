@@ -1,0 +1,36 @@
+<aside class="main-sidebar">
+
+      <!-- sidebar: style can be found in sidebar.less -->
+      <section class="sidebar">
+
+        <!-- Sidebar user panel (optional) -->
+        <div class="user-panel">
+          <div class="pull-left image" style=" height: 46px;">
+
+          </div>
+          <div class="pull-left info">
+            <p>是他</p>
+            <!-- Status -->
+            <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+          </div>
+        </div>
+
+        <!-- Sidebar Menu -->
+        <ul class="sidebar-menu">
+          <li class="header">目录</li>
+          <!-- Optionally, you can add icons to the links -->
+          <li  *ngFor="let menu of menus" [class.active] = 'currentId== menu.id'>
+            <a href="javascript:;" (click)="nav(menu)" >
+              <!--<i class="fa fa-link"></i>-->
+              <i [ngClass]="{'fa fa-bell-o':menu.id==1}"></i>
+              <i [ngClass]="{'fa fa-envelope-o':menu.id==2}"></i>
+              <i [ngClass]="{'fa fa-clock-o':menu.id==3}"></i>
+              <i [ngClass]="{'fa fa-users':menu.id==4}"></i>
+              <span>{{menu.name}}</span>
+            </a>
+          </li>
+        </ul>
+        <!-- /.sidebar-menu -->
+      </section>
+      <!-- /.sidebar -->
+    </aside>

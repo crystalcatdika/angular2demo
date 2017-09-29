@@ -1,0 +1,7 @@
+.home{
+  background-color: palevioletred;
+  height: 300px;
+  width: 70%;
+  float: left;
+  box-sizing: border-box;
+}

@@ -1,0 +1,41 @@
+
+<div class="container">
+  <div class="form row">
+    <form action="/home" #myForm="ngForm" method="post" (ngSubmit)="createUser(myForm.value)" class="form-horizontal col-sm-offset-3 col-md-offset-3" id="login_form">
+      <h3 class="form-title">Login to your account</h3>
+      <div class="col-sm-9 col-md-9">
+        <div class="form-group">
+          <i class="fa fa-user fa-lg"></i>
+          <input ngModel class="form-control required"   type="text" placeholder="Username" name="username" autofocus="autofocus" maxlength="20"/>
+        </div>
+        <div class="form-group">
+          <i class="fa fa-lock fa-lg"></i>
+          <input ngModel  class="form-control required" type="password" placeholder="Password" name="password" maxlength="8"/>
+        </div>
+        <div class="form-group">
+          <label class="checkbox">
+            <input type="checkbox" name="remember" value="1"/> Remember me
+          </label>
+          <hr />
+          <a href="javascript:;" id="register_btn" class="">Create an account</a>
+        </div>
+        <div class="form-group">
+          <input type="submit" class="btn btn-success pull-right" value="Login "  />
+          <!--<button  (click)="makechange()">跳转</button>-->
+        </div>
+      </div>
+    </form>
+    <!--<div class="form-group">-->
+      <!--{{myForm.value | json}}-->
+    <!--</div>-->
+  </div>
+</div>
+
+
+<!--<form action="#" #myForm="ngForm" (ngSubmit)="createUser(myForm.value)"  method="post">-->
+  <!--<input ngModel name="nickname" type="text">-->
+  <!--<button type="submit">提交</button>-->
+<!--</form>-->
+<!--<div>-->
+  <!--{{myForm.value | json}}-->
+<!--</div>-->
