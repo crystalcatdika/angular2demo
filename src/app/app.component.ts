@@ -10,7 +10,7 @@ declare var $:any;
 })
 export class AppComponent implements OnInit {
   userName:string;
-  height:string;
+  // height:string;
   constructor(private router :Router){
   };
 

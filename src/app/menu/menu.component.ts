@@ -24,7 +24,8 @@ export class MenuComponent implements OnInit {
 
   nav(menu:Menu){
     this.currentId = menu.id;
-    this.router.navigateByUrl(menu.link);
+    // this.router.navigateByUrl(menu.link);
+    this.router.navigate([menu.link,2])
   }
 }
 

@@ -1,5 +1,6 @@
 
 import {ViewChild, Component, OnInit } from '@angular/core';
+import {ActivatedRoute} from "@angular/router";
 declare var $:any;
 
 @Component({
@@ -9,12 +10,13 @@ declare var $:any;
 })
 export class addressComponent implements OnInit {
 
-
-
-  constructor() { }
+private addressId:number;
+  private addressName:string;
+  constructor(private routein:ActivatedRoute) { }
 
   ngOnInit() {
-
+    this.addressId=this.routein.snapshot.queryParams["id"]
+    this.addressName=this.routein.snapshot.data[0]["isPro"]
       // /* initialize the external events
       //  -----------------------------------------------------------------*/
       // function ini_events(ele) {

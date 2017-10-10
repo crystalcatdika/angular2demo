@@ -3,7 +3,6 @@ import {Http} from "@angular/http";
 import "rxjs/Rx";
 import {Observable} from "rxjs";
 
-
 @Component({
   selector: 'app-httpdata',
   templateUrl: './httpdata.component.html',
@@ -21,7 +20,8 @@ export class HttpdataComponent implements OnInit {
 
   ngOnInit() {
     this.dataSource.subscribe(
-      data => {this.phonedata = data;
+      data => {
+        this.phonedata = data;
       console.log(this.phonedata)
       }
     )

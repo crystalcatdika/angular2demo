@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ActivatedRoute} from "@angular/router";
 
 @Component({
   selector: 'app-allbox',
@@ -6,10 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./allbox.component.css']
 })
 export class AllboxComponent implements OnInit {
-
-  constructor() { }
+  private homeId:string;
+  constructor(private routeInfo:ActivatedRoute) { }
 
   ngOnInit() {
+    this.homeId=this.routeInfo.snapshot.params["id"]
   }
 
 }

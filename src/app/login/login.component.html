@@ -1,7 +1,8 @@
 
-<div class="container">
+<div class="container wrapper">
   <div class="form row">
-    <form action="/home" #myForm="ngForm" method="post" (ngSubmit)="createUser(myForm.value)" class="form-horizontal col-sm-offset-3 col-md-offset-3" id="login_form">
+    <!--method="post"-->
+    <form  #myForm="ngForm"  (ngSubmit)="createUser(myForm.value)" class="form-horizontal col-sm-offset-3 col-md-offset-3" id="login_form">
       <h3 class="form-title">Login to your account</h3>
       <div class="col-sm-9 col-md-9">
         <div class="form-group">
@@ -14,16 +15,31 @@
         </div>
         <div class="form-group">
           <label class="checkbox">
-            <input type="checkbox" name="remember" value="1"/> Remember me
+            <!--value="1"-->
+            <input ngModel type="checkbox" name="remember" /> Remember me
           </label>
           <hr />
           <a href="javascript:;" id="register_btn" class="">Create an account</a>
         </div>
+
+        <!--测试file 上传文件-->
+        <!--<div class="form-group">-->
+          <!--<input ngModel  class="form-control required" type="file"  name="fileName" />-->
+        <!--</div>-->
+
+        <!--<div ngModelGroup="passwordInfo">-->
+          <!--<div>密码 <input ngModel name="passwordone" type="password"></div>-->
+          <!--<div>确定密码 <input ngModel name="passwordtwo"  type="password"></div>-->
+        <!--</div>-->
+
         <div class="form-group">
-          <input type="submit" class="btn btn-success pull-right" value="Login "  />
+          <input ngModel type="submit" class="btn btn-success pull-right" value="Login "  />
         </div>
       </div>
     </form>
   </div>
 </div>
 
+<div>
+  {{myForm.value|json}}
+</div>

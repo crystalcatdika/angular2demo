@@ -17,6 +17,15 @@ import { StockService} from "./shared/stock.service";
 import {LoggerService} from "./shared/logger.service";
 import { AllboxComponent } from './allbox/allbox.component';
 
+import { CookieModule } from 'ngx-cookie';
+import { CookieComponent } from './cookie/cookie.component';
+import { MeetComponent } from './meet/meet.component';
+import { NewmeetComponent } from './newmeet/newmeet.component';
+import { Code404Component } from './code404/code404.component';
+import { ConsultComponent } from './consult/consult.component';
+import { ActiveformComponent } from './activeform/activeform.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,14 +37,21 @@ import { AllboxComponent } from './allbox/allbox.component';
     LoginComponent,
     HttpdataComponent,
     StockComponent,
-    AllboxComponent
+    AllboxComponent,
+    CookieComponent,
+    MeetComponent,
+    NewmeetComponent,
+    Code404Component,
+    ConsultComponent,
+    ActiveformComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule, // <-- import the FormsModule before binding with [(ngModel)]
+    ReactiveFormsModule,
     HttpModule,
-    ReactiveFormsModule
+    CookieModule.forRoot()
   ],
   providers: [StockService,LoggerService],
   bootstrap: [AppComponent]
