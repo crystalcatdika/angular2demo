@@ -1,3 +1,7 @@
 <p>
   bind works!
 </p>
+<input type="text" #myField (keyup)="onkey(myField.value)">
+<input [formControl]="searchInput">
+<p>日期{{birthday |date:'yyyy-MM--dd HH:mm:ss'}}</p>
+<p>数字处理{{pi|number:'2.1-4'}}四舍五入</p>

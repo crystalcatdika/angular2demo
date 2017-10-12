@@ -28,6 +28,8 @@ import {CommonModule} from "@angular/common";
 import {FileUploadModule} from "ng2-file-upload";
 import { PineComponent } from './pine/pine.component';
 import { BindComponent } from './bind/bind.component';
+import { MultiplePipe } from './pipe/multiple.pipe';
+
 
 
 @NgModule({
@@ -49,7 +51,9 @@ import { BindComponent } from './bind/bind.component';
     ConsultComponent,
     ActiveformComponent,
     PineComponent,
-    BindComponent
+    BindComponent,
+    MultiplePipe,
+
 
   ],
   imports: [
