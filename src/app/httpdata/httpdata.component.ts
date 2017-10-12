@@ -14,7 +14,7 @@ export class HttpdataComponent implements OnInit {
   phonedata = [];
   constructor(public http: Http) {
 
-    this.dataSource = this.http.get('http://192.168.0.168:8083/EasyuiDemo/PhoneServlet')
+    this.dataSource = this.http.get('http://192.168.0.167:8083/EasyuiDemo/PhoneServlet')
       .map(response =>response.json());
   }
 

@@ -18,7 +18,8 @@
         <!-- Sidebar Menu -->
         <ul class="sidebar-menu">
           <li class="header">目录</li>
-          <!-- Optionally, you can add icons to the links -->
+
+          <!--<li  *ngFor="let menu of menus" [ngClass]="{'active':currentId== menu.id}">-->
           <!--<li  *ngFor="let menu of menus" [class.active] = 'currentId== menu.id'>-->
             <!--<a href="javascript:;" (click)="nav(menu)" >-->
               <!--&lt;!&ndash;<i class="fa fa-link"></i>&ndash;&gt;-->
@@ -47,6 +48,13 @@
             <a href="javascript:;" [routerLink]="['./activeform']" ><i class="fa fa-users"></i> <span>响应式表单</span></a>
           </li>
 
+          <li>
+            <a href="javascript:;" [routerLink]="['./pine']" ><i class="fa fa-users"></i> <span>事件管道</span></a>
+          </li>
+
+          <li>
+            <a href="javascript:;" [routerLink]="['./bind']" ><i class="fa fa-users"></i> <span>观察者数据流</span></a>
+          </li>
         </ul>
         <!-- /.sidebar-menu -->
       </section>

@@ -1,0 +1,23 @@
+<p [ngStyle]="{'color':canshow?'red':'green'}">
+  pine works!
+</p>
+<p [ngStyle]="{'color':'green'}">ngStyle</p>
+<p [ngStyle]="classStyle">ngStyle统一管理</p>
+
+
+<p class="a b" [class.small]="changesmall">class的dom绑定</p>
+<p [ngClass]="divClass">ngClass管理各种class</p>
+
+<table>
+  <tr>
+    <td [attr.colspan]="size">史记</td>
+  </tr>
+</table>
+
+<button disabled="false" (click)="doOnClick($event)">点我</button>
+
+<img src="http://placehold.it/40x32">
+<img [src]="imgUrl">
+<input type="text" value="Tom" (input)="doOnInput($event)" >
+<input type="text" [(ngModel)]="name">
+<p>{{name}}</p>

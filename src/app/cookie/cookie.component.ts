@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { CookieService } from 'ngx-cookie';
+// import { CookieService } from 'ngx-cookie';
 
 @Component({
   selector: 'app-cookie',
@@ -9,12 +9,12 @@ import { CookieService } from 'ngx-cookie';
 })
 export class CookieComponent implements OnInit {
 
-  constructor(private _cookieService:CookieService) { }
-  getCookie(key: string){
-    return this._cookieService.get(key);
-  }
+  // constructor(private _cookieService:CookieService) { }
+  // getCookie(key: string){
+  //   return this._cookieService.get(key);
+  // }
   ngOnInit() {
     // this._cookieService.put()
-    console.log(this._cookieService)
+    // console.log(this._cookieService)
   }
 }

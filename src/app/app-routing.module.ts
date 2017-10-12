@@ -11,6 +11,8 @@ import { NewmeetComponent } from "./newmeet/newmeet.component";
 import { Code404Component } from "./code404/code404.component"
 import {ConsultComponent} from "./consult/consult.component";
 import {ActiveformComponent} from "./activeform/activeform.component";
+import {PineComponent} from "./pine/pine.component";
+import {BindComponent} from "./bind/bind.component";
 
 const routes: Routes = [
   {path:'',redirectTo:"login",pathMatch:"full"},
@@ -28,6 +30,8 @@ const routes: Routes = [
       {path:'httpdata',component:HttpdataComponent },
       {path:'zhuService',component:StockComponent },
       {path:'activeform',component:ActiveformComponent},
+      {path:'pine',component:PineComponent},
+      {path:'bind',component:BindComponent},
     ]
   },
   {path:'**',component:Code404Component},

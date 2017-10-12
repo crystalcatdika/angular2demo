@@ -13,5 +13,9 @@
     <div>密码：<input  formControlName="password"  type="password"></div>
     <div>确定密码 <input  formControlName="passwordConfirm"  type="password"></div>
   </div>
+  <div>
+    文件上传：multiple
+    <input type="file" ng2FileSelect [uploader]="uploader" (change)="selectedFileOnChanged($event)"   />
+  </div>
   <button type="submit">提交</button>
 </form>
