@@ -30,7 +30,7 @@ export class ActiveformComponent implements OnInit {
     itemAlias: "uploadedfile",
     // headers: [{name: "myCustomHeader", value:"some value"}]
     //   multipart/form-data text/plain
-    headers: [{name: "Content-Type", value:"application/x-www-form-urlencoded"}]
+    headers: [{name: "Content-Type", value:"multipart/form-data"}]
   });
 
 
@@ -62,12 +62,12 @@ export class ActiveformComponent implements OnInit {
   }
   addEmail(){
     let emails=this.formModel.get('emails') as FormArray;
-    emails.push(new FormControl())
+    emails.push(new FormControl());
     console.log(this.formModel.value)
   }
   createUser(){
-    console.log(this.formModel.value)
-    console.log(this.uploader)
+    console.log(this.formModel.value);
+    console.log(this.uploader);
     this.uploader.queue[0].onSuccess = (response, status, headers) => {
       // 上传文件成功
       if (status == 200) {
@@ -79,14 +79,13 @@ export class ActiveformComponent implements OnInit {
       }
     };
     this.uploader.queue[0].upload(); // 开始上传
-
-
   }
 
 
 
-  selectedFileOnChanged() {
+  selectedFileOnChanged(ka) {
     // 这里是文件选择完成后的操作处理
+    console.log(ka)
   }
 
 

@@ -1,5 +1,5 @@
 
-<div class="container wrapper">
+<div id="login" class="container wrapper">
   <div class="form row">
     <!--method="post"-->
     <!--#myForm="ngForm"-->
@@ -14,6 +14,7 @@
           <i class="fa fa-lock fa-lg"></i>
           <input ngModel  class="form-control required" type="password" placeholder="Password" name="password" maxlength="8"/>
         </div>
+
         <div class="form-group">
           <label class="checkbox">
             <!--value="1"-->
@@ -23,11 +24,18 @@
           <a href="javascript:;" id="register_btn" class="">Create an account</a>
         </div>
 
+        <!--测试select-->
+        <!--<div class="form-group">-->
+          <!--&lt;!&ndash;<select class="form-control" [(ngModel)]="prod" (ngModelchange)="selectProd($event)" >&ndash;&gt;-->
+          <!--<select class="form-control" [(ngModel)]="prod" (change)="selectProd($event.target.value)" >-->
+            <!--<option *ngFor="let prodir of prodirList" [value]="prodir.id">{{prodir.name}}</option>-->
+          <!--</select>-->
+        <!--</div>-->
+
         <!--测试file 上传文件-->
         <!--<div class="form-group">-->
           <!--<input ngModel  class="form-control required" type="file"  name="fileName" />-->
         <!--</div>-->
-
         <!--<div ngModelGroup="passwordInfo">-->
           <!--<div>密码 <input ngModel name="passwordone" type="password"></div>-->
           <!--<div>确定密码 <input ngModel name="passwordtwo"  type="password"></div>-->
@@ -36,6 +44,7 @@
         <div class="form-group">
           <input ngModel type="submit" class="btn btn-success pull-right" value="Login "  />
         </div>
+
       </div>
     </form>
   </div>

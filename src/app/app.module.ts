@@ -7,7 +7,6 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { addressComponent } from './address/address.component';
 import { HeaderComponent } from './header/header.component';
-import { ContentComponent } from './content/content.component';
 import { MenuComponent } from './menu/menu.component';
 import { LoginComponent } from './login/login.component';
 import { HttpdataComponent } from './httpdata/httpdata.component';
@@ -29,6 +28,7 @@ import {FileUploadModule} from "ng2-file-upload";
 import { PineComponent } from './pine/pine.component';
 import { BindComponent } from './bind/bind.component';
 import { MultiplePipe } from './pipe/multiple.pipe';
+import { GouziComponent } from './gouzi/gouzi.component';
 
 
 
@@ -38,7 +38,6 @@ import { MultiplePipe } from './pipe/multiple.pipe';
     HomeComponent,
     addressComponent,
     HeaderComponent,
-    ContentComponent  ,
     MenuComponent,
     LoginComponent,
     HttpdataComponent,
@@ -53,8 +52,7 @@ import { MultiplePipe } from './pipe/multiple.pipe';
     PineComponent,
     BindComponent,
     MultiplePipe,
-
-
+    GouziComponent,
   ],
   imports: [
     BrowserModule,

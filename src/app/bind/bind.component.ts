@@ -11,6 +11,7 @@ import 'rxjs/Rx';
 export class BindComponent implements OnInit {
   birthday:Date =new Date();
   pi:number=3.1415926;
+  size:number=89;
   // Observable 被观察者 生成流
   // e=>console.log(e),err=>console.error(err) 观察者 处理流
   searchInput:FormControl=new FormControl();
