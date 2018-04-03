@@ -13,6 +13,7 @@ import {ConsultComponent} from "./consult/consult.component";
 import {ActiveformComponent} from "./activeform/activeform.component";
 import {PineComponent} from "./pine/pine.component";
 import {BindComponent} from "./bind/bind.component";
+import {GouziComponent} from "./gouzi/gouzi.component";
 
 const routes: Routes = [
   {path:'',redirectTo:"login",pathMatch:"full"},
@@ -32,6 +33,7 @@ const routes: Routes = [
       {path:'activeform',component:ActiveformComponent},
       {path:'pine',component:PineComponent},
       {path:'bind',component:BindComponent},
+      {path:'gouzi',component:GouziComponent}
     ]
   },
   {path:'**',component:Code404Component},

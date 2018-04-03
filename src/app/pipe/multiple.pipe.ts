@@ -3,10 +3,14 @@ import { Pipe, PipeTransform } from '@angular/core';
 @Pipe({
   name: 'multiple'
 })
-export class MultiplePipe implements PipeTransform {
 
-  transform(value: any, args?: any): any {
-    return null;
+export class MultiplePipe implements PipeTransform {
+  // args可选参数
+  transform(value: number, args?: number): any {
+    if(!args){
+      args=1
+    }
+    return value*args;
   }
 
 }

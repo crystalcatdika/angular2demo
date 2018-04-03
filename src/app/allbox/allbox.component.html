@@ -9,7 +9,46 @@
   <!-- Left side column. contains the logo and sidebar -->
   <app-menu></app-menu>
   <!-- Content Wrapper. Contains page content -->
-  <app-content></app-content>
+  <!--<app-content></app-content>-->
+<div class="content-wrapper">
+  <!-- Content Header (Page header) -->
+  <section class="content-header">
+    <!--<h1>-->
+      <!--{{pageTitle}}-->
+      <!--<small>{{pageDesc}}</small>-->
+    <!--</h1>-->
+    <ol class="breadcrumb">
+      <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
+      <li class="active">Here</li>
+    </ol>
+  </section>
+
+
+  <!-- Main content -->
+  <section class="content">
+    <!--//测试钩子改变事件-->
+  <!--<h2>我是内容父组件</h2>-->
+    <!--<div>-->
+      <!--<p>问候<input type="text" [(ngModel)]="greeting"></p>-->
+      <!--<p>姓名<input type="text" [(ngModel)]="user.name"></p>-->
+    <!--</div>-->
+    <!--<app-gouzi [greeting]="greeting" [user]="user"></app-gouzi>-->
+
+
+    <app-gouzi>
+      <div class="red" >红框内的内容{{greeting}}</div>
+      <div class="green" >绿框内的内容 {{user.name}}</div>
+    </app-gouzi>
+
+
+    <router-outlet ></router-outlet>
+    <!--<app-stock-manager></app-stock-manager>-->
+  </section>
+  <!-- /.content -->
+</div>
+
+
+
   <!--<h2>{{userName}}</h2>-->
   <!--<h2>是撒</h2>-->
 
